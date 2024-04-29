@@ -1,7 +1,18 @@
-#!/bin/sh
-#SBATCH --time=00:15:00
+#!/bin/bash
+#SBATCH --job-name=cleanrltest
+#SBATCH --time=15
 #SBATCH -N 1
 
-cp -r $HOME/slurm-bpai-tutorial/python $TMPDIR/ava940
-cd $TMPDIR/ava940/python
-python Trial.py
+module load gnu9/9.4.0
+
+conda init
+conda activate anaconda-test
+
+which python
+
+cd /var/scratch/ava940/cleanrl/
+python cleanrl/ppo.py \
+    --seed 1 \
+    --env-id CartPole-v0 \
+    --total-timesteps 50000
+    
