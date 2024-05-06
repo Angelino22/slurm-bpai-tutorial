@@ -1,3 +1,8 @@
-print("Hello world from Angel's Directory!")
-import sys, os
-print(os.path.dirname(sys.executable))
+seeds = [1,2,3,4,5]
+
+def main(seed):
+    print("Using seed:", seed)
+
+if __name__ == "__main__":
+    for seed in seeds:
+        main(seed)
