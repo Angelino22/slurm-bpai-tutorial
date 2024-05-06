@@ -16,7 +16,7 @@ cd /var/scratch/ava940/cleanrl/
 seeds=(123 456 789 101112 131415)
 
 seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]} 
-python cleanrl/ppo.py \
+python cleanrl/dqn.py \
     --seed $seed \
     --env-id CartPole-v0 \
     --total-timesteps 50000
