@@ -4,9 +4,13 @@
 #SBATCH -N 1
 #SBATCH --array=1-5
 
+# Set the Weights & Biases API key
+export WANDB_API_KEY='8bd73b984a24c97ea6a312caebaf5a8132cdf78b'
+
+# Rest of your script...
 mkdir -p $TMPDIR/ava940
-cp -r /var/scratch/ava940 $TMPDIR/ava940
-cd $TMPDIR/ava940/DQN/cleanrlangel
+rsync -av --exclude='.git' --exclude='anaconda3' /var/scratch/ava940/ $TMPDIR/ava940/
+cd $TMPDIR/ava940/DQN/cleanrlangel || exit 1
 module load gnu9/9.4.0
 conda init
 conda activate bpaiAngel
@@ -20,9 +24,6 @@ python cleanrl/Experiments.py \
     --wandb_project_name Foozy \
     --capture_video
 rm -rf $TMPDIR/ava940/
-
-
-
 
 
 
