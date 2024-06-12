@@ -5,8 +5,8 @@
 #SBATCH --array=1-5
 
 mkdir -p $TMPDIR/ava940
-cp -r $HOME/var/scratch/ava940/DQN/$TMPDIR/ava940
-cd $TMPDIR/ava940/cleanrlangel/cleanrl
+cp -r $HOME/var/scratch/ava940/$TMPDIR/ava940
+cd $TMPDIR/ava940/DQN/cleanrlangel
 module load gnu9/9.4.0
 conda init
 conda activate bpaiAngel
