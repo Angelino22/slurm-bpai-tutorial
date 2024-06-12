@@ -23,7 +23,7 @@ conda init
 conda activate bpaiAngel
 seeds=(123 456 789 101112 131415)
 seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
-python Experiments.py \
+python Experiments \
     --seed $seed \
     --env-id Foozpong_v3 \
     --total-timesteps 1000 \
