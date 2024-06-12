@@ -15,7 +15,7 @@ seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 python cleanrl/Experiments.py \
     --seed $seed \
     --env-id Foozpong_v3 \
-    --total-timesteps 50000 \
+    --total-timesteps 5000 \
     --track \
     --wandb_project_name Foozy \
     --capture_video
