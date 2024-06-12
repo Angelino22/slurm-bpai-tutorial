@@ -1,22 +1,30 @@
 #!/bin/bash
 #SBATCH --job-name=cleanrltest
-#SBATCH --time=15
+#SBATCH --time=00:15:00
 #SBATCH -N 1
 #SBATCH --array=1-5
 
+mkdir -p $TMPDIR/ava940
+cp -r $HOME/var/scratch/ava940/DQN/$TMPDIR/ava940
+cd $TMPDIR/ava940/cleanrlangel/cleanrl
 module load gnu9/9.4.0
-
 conda init
-conda activate anaconda-test
-
-which python
-
-cd /var/scratch/ava940/cleanrl/
-
+conda activate bpaiAngel
 seeds=(123 456 789 101112 131415)
-
 seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]} 
-python cleanrl/dqn.py \
+python cleanrl/Experiments.py \
     --seed $seed \
-    --env-id CartPole-v0 \
+    --env-id Foozpong_v3 \
     --total-timesteps 50000
+    --track 
+    --wandb_project_name Foozy
+    --capture_video
+rm -rf $TMPDIR/ava940/
+
+
+
+
+
+
+
+
