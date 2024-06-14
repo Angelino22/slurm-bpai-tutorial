@@ -3,6 +3,8 @@
 #SBATCH --time=07:00:00
 #SBATCH -N 1
 #SBATCH --array=1-5
+#SBATCH --mail-user=angelrvo@hotmail.com
+#SBATCH --mail-type ALL
 
 # Ensure the directory exists and is empty
 mkdir -p $TMPDIR/ava940
