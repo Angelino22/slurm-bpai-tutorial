@@ -26,7 +26,7 @@ seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 python Experiments \
     --seed $seed \
     --env-id Foozpong_v3 \
-    --total-timesteps 5000 \
+    --total-timesteps 10000 \
     --track \
     --wandb_project_name FINALPONG \
     --wandb_entity Angelrvo2002\
