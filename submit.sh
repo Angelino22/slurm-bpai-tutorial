@@ -29,6 +29,7 @@ python Experiments \
     --total-timesteps 1000 \
     --track \
     --wandb_project_name Foozy \
+    --wandb_entity Angelrvo2002\
     --capture_video
 
 # Cleanup: Remove the copied directory after the experiment
