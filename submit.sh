@@ -28,7 +28,7 @@ python Experiments \
     --env-id Foozpong_v3 \
     --total-timesteps 1000 \
     --track \
-    --wandb_project_name Foozy \
+    --wandb_project_name FINALPONG \
     --wandb_entity Angelrvo2002\
     --capture_video
 
