@@ -17,9 +17,9 @@ seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 python Experiments \
     --seed $seed \
     --env-id Foozpong_v3 \
-    --total-timesteps 1000000 \
+    --total-timesteps 5000000 \
     --track \
-    --wandb_project_name FINALPONG_2 \
+    --wandb_project_name UNTRAINED \
     --wandb_entity Angelrvo2002\
     --capture_video
 rm -rf $TMPDIR/ava940/
