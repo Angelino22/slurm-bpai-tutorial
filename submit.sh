@@ -3,8 +3,7 @@
 #SBATCH --time=00:15:00
 #SBATCH -N 1
 #SBATCH --array=1-5
-#SBATCH --mail-user=angelrvo@hotmail.com
-#SBATCH --mail-type=ALL
+
 
 
 mkdir -p $TMPDIR/ava940
