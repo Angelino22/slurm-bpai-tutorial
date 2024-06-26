@@ -29,7 +29,7 @@ seeds=(123 456 789 101112 131415)
 seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 
 # Run the Python script with necessary arguments
-python Experiments_2.py \
+python Experiments_2 \
     --seed $seed \
     --env-id Foozpong_v3 \
     --total-timesteps 5000 \
