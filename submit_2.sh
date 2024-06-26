@@ -6,7 +6,7 @@
 
 # Directories and paths
 WORK_DIR="$TMPDIR/ava940"
-SAVE_DIR="/var/scratch/ava940/saved_models"
+SAVE_DIR="/var/scratch/ava940/saved_models_2"
 PROJECT_DIR="$WORK_DIR/DQN/cleanrlangel/cleanrl"
 
 # Create necessary directories
