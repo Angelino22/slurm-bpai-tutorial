@@ -7,6 +7,7 @@
 # Directories and paths
 WORK_DIR="$TMPDIR/ava940"
 SAVE_DIR="/var/scratch/ava940/saved_models"
+PROJECT_DIR="$WORK_DIR/DQN/cleanrlangel/cleanrl"
 
 # Create necessary directories
 mkdir -p $WORK_DIR
@@ -16,7 +17,7 @@ mkdir -p $SAVE_DIR
 rsync -av --exclude='.git' --exclude='anaconda3' /var/scratch/ava940/ $WORK_DIR/
 
 # Navigate to the project directory
-cd $WORK_DIR/DQN/cleanrlangel/cleanrl || exit 1
+cd $PROJECT_DIR || exit 1
 
 # Load the module and activate the conda environment
 module load gnu9/9.4.0
@@ -38,8 +39,11 @@ python Experiments_2.py \
     --capture_video \
     --save_model
 
-# Copy the saved model files back to the main storage
-rsync -av $WORK_DIR/DQN/cleanrlangel/cleanrl/runs/ $SAVE_DIR/
+# Check if the runs directory exists
+RUNS_DIR="$PROJECT_DIR/runs"
+if [ -d "$RUNS_DIR" ]; then
+    rsync -av "$RUNS_DIR/" "$SAVE_DIR/"
+fi
 
 # Clean up the temporary directory
 rm -rf $WORK_DIR
