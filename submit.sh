@@ -34,7 +34,7 @@ python Experiments \
     --env-id Foozpong_v3 \
     --total-timesteps 4000000 \
     --track \
-    --wandb_project_name TRAINED \
+    --wandb_project_name UNTRAINED \
     --wandb_entity Angelrvo2002 \
     --capture_video \
     --save_model
