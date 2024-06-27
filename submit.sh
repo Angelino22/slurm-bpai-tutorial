@@ -36,7 +36,6 @@ python Experiments \
     --track \
     --wandb_project_name UNTRAINED \
     --wandb_entity Angelrvo2002 \
-    --capture_video \
     --save_model
 
 # Check if the runs directory exists
