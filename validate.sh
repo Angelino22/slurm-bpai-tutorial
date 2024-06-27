@@ -37,7 +37,7 @@ python Validation.py \
     --wandb_project_name VALIDATED \
     --wandb_entity Angelrvo2002 \
     --capture_video \
-    --save_model
+
 
 # Check if the runs directory exists
 RUNS_DIR="$PROJECT_DIR/runs"

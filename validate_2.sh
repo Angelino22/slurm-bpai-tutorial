@@ -38,7 +38,6 @@ python Validation_2.py \
     --save_path /var/scratch/ava940/saved_models_2/Foozpong_v3__Experiment__789__1719503146/Experiment_first_0.cleanrl_model
     --wandb_entity Angelrvo2002 \
     --capture_video \
-    --save_model
 
 # Check if the runs directory exists
 RUNS_DIR="$PROJECT_DIR/runs"
