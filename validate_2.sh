@@ -35,7 +35,7 @@ python Validation_2.py \
     --total-timesteps 50000 \
     --track \
     --wandb_project_name UNVALIDATED \
-    --save_path /var/scratch/ava940/saved_models_2/Foozpong_v3__Experiment__789__1719503146/
+    --save_path /var/scratch/ava940/saved_models_2/Foozpong_v3__Experiment__789__1719503146
     --wandb_entity Angelrvo2002 \
     --capture_video \
     --save_model
