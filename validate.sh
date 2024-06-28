@@ -32,11 +32,13 @@ seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 python Validation.py \
     --seed $seed \
     --env-id Foozpong_v3 \
-    --total-timesteps 100000 \
+    --total-timesteps 500000 \
     --track \
+    --save_path /var/scratch/ava940/saved_models/Foozpong_v3__Experime__789__1719530360/Experime_first_0.cleanrl_model \
     --wandb_project_name VALIDATED \
     --wandb_entity Angelrvo2002 \
     --capture_video \
+
 
 
 # Check if the runs directory exists
