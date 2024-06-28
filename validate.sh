@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=cleanrltest
-#SBATCH --time=05:00:00
+#SBATCH --time=00:15:00
 #SBATCH -N 1
 #SBATCH --array=1-5
 
