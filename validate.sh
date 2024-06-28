@@ -37,7 +37,6 @@ python Validation.py \
     --save_path /var/scratch/ava940/saved_models/Foozpong_v3__Experime__789__1719530360/Experime_first_0.cleanrl_model \
     --wandb_project_name VALIDATED \
     --wandb_entity Angelrvo2002 \
-    --capture_video \
 
 
 
