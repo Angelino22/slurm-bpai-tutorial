@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=cleanrltest
-#SBATCH --time=05:00:00
+#SBATCH --time=10:00:00
 #SBATCH -N 1
 #SBATCH --array=1-5
 
@@ -32,7 +32,7 @@ seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 python Experiments \
     --seed $seed \
     --env-id Foozpong_v3 \
-    --total-timesteps 3000000 \
+    --total-timesteps 4000000 \
     --track \
     --wandb_project_name UNTRAINED \
     --wandb_entity Angelrvo2002 \
