@@ -32,7 +32,7 @@ seed=${seeds[$SLURM_ARRAY_TASK_ID - 1]}
 python Validation.py \
     --seed $seed \
     --env-id Foozpong_v3 \
-    --total-timesteps 100000 \
+    --total-timesteps 1000000 \
     --track \
     --save_path /var/scratch/ava940/saved_models/Foozpong_v3__Experime__123__1720293807/Experime_first_0.cleanrl_model \
     --wandb_project_name VALIDATED \
